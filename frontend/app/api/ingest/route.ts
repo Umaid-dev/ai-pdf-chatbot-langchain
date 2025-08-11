@@ -1,3 +1,7 @@
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;         // optional, ensures no caching
+export const runtime = 'nodejs';     // optional, makes it a Node function
+
 // app/api/ingest/route.ts
 import { indexConfig } from '@/constants/graphConfigs';
 import { langGraphServerClient } from '@/lib/langgraph-server';

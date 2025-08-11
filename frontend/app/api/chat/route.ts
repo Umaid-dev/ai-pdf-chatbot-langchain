@@ -1,8 +1,11 @@
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;         // optional, ensures no caching
+export const runtime = 'nodejs';     // optional, makes it a Node function
+
 import { NextResponse } from 'next/server';
 import { createServerClient } from '@/lib/langgraph-server';
 import { retrievalAssistantStreamConfig } from '@/constants/graphConfigs';
 
-export const runtime = 'edge';
 
 export async function POST(req: Request) {
   try {
